@@ -7,6 +7,7 @@ import com.javanauta.bffagendadortarefas.bussines.dto.in.UsuarioDTORequest;
 import com.javanauta.bffagendadortarefas.bussines.dto.out.EnderecoDTOResponse;
 import com.javanauta.bffagendadortarefas.bussines.dto.out.TelefoneDTOResponse;
 import com.javanauta.bffagendadortarefas.bussines.dto.out.UsuarioDTOResponse;
+import com.javanauta.bffagendadortarefas.bussines.dto.out.ViaCepDTOResponse;
 import com.javanauta.bffagendadortarefas.infraestructure.client.UsuarioClient;
 
 
@@ -60,4 +61,8 @@ public class UsuarioService {
         return client.cadastraTelefone(dto, token);
     }
 
+    public ViaCepDTOResponse buscaEnderecoPorCep(String cep){
+
+        return client.buscarDadosCep(cep);
+    }
 }
